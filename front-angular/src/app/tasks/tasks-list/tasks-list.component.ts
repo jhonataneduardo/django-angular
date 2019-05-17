@@ -19,7 +19,7 @@ export class TasksListComponent implements OnInit {
 
   tasksList() {
     this._TaskService.list().subscribe(
-      (data: any) => console.log(data)
+      (data: any) => this.tasks = data
     )
   }
 
