@@ -1,4 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -8,6 +10,8 @@ import { AppComponent } from './app.component';
 import { TaskService } from './services/tasks.service';
 import { TasksListComponent } from './tasks/tasks-list/tasks-list.component';
 
+import { MaterialModule } from './material';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +20,9 @@ import { TasksListComponent } from './tasks/tasks-list/tasks-list.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MaterialModule
   ],
   providers: [
     TaskService
